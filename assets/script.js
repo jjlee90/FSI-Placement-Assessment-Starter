@@ -51,7 +51,7 @@ ccPlusBtn.addEventListener('click', function() {
 const ccMinusBtn = document.querySelector('#minus-cc')
     
 ccMinusBtn.addEventListener('click', function() {
-    let ccCount = parseInt(gbCell.textContent)
+    let ccCount = parseInt(ccCell.textContent)
     ccCell.textContent = ccCount -1 
     
     let totalCount = parseInt(totalCell.textContent)
