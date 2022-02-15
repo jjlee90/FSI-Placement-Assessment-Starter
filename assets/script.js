@@ -28,14 +28,22 @@ gbPlusBtn.addEventListener('click', function() {
     let totalCount = parseInt(totalCell.textContent)
     totalCell.textContent = totalCount +1 
 })
-const gbMinusBtn = document.querySelector('#minus-gb')
-    
+const gbMinusBtn = document.getElementById('minus-gb')
+
 gbMinusBtn.addEventListener('click', function() {
     let gbCount = parseInt(gbCell.textContent)
     gbCell.textContent = gbCount -1 
+    if (gbCell.textContent < 0) {
+        gbCell.textContent = 0
+        return gbCell.textContent
+    }
     
     let totalCount = parseInt(totalCell.textContent)
     totalCell.textContent = totalCount -1 
+    // if (totalCell.textContent < 0) {
+    //     totalCell.textContent = 0 
+    //     return totalCell.textContent
+    // }
 })
 //
 const ccPlusBtn = document.querySelector('#add-cc')
@@ -53,9 +61,17 @@ const ccMinusBtn = document.querySelector('#minus-cc')
 ccMinusBtn.addEventListener('click', function() {
     let ccCount = parseInt(ccCell.textContent)
     ccCell.textContent = ccCount -1 
-    
+    if (ccCell.textContent < 0) {
+        ccCell.textContent = 0
+        return ccCell.textContent
+    }
     let totalCount = parseInt(totalCell.textContent)
     totalCell.textContent = totalCount -1 
+    // if (totalCell.textContent < 0) {
+    //     totalCell.textContent = 0 
+    //     return totalCell.textContent
+    // }
+    
 })
 const sugarPlusBtn = document.querySelector('#add-sugar')
 let sugarCell = document.querySelector('#qty-sugar')
@@ -73,7 +89,15 @@ sugarMinusBtn.addEventListener('click', function() {
   
     let sugarCount = parseInt(sugarCell.textContent)
     sugarCell.textContent = sugarCount -1 
+    if (sugarCell.textContent < 0) {
+        sugarCell.textContent = 0
+        return Cell.textContent
+    }
     
     let totalCount = parseInt(totalCell.textContent)
     totalCell.textContent = totalCount -1 
+    // if (totalCell.textContent < 0) {
+    //     totalCell.textContent = 0 
+    //     return totalCell.textContent
+    // }
 })
